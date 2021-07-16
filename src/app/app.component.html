@@ -1,13 +1,39 @@
-<div class="container">
-  <div class="card">
-    <div class="card-header">
+<div class="container"> 
+  <div class="row">
+    <div class="col-md-12">
+    <h1 class="text-center">Project</h1>  </div>
+  </div>
+<div class="row">
+    <div class="col-md-12"> 
+             <div class="card">
+             <div class="card-header">
+                <h4> Parent Component</h4>
+            </div>
+           <div class="card-body">
+               Pass Data : <input type="text" class="form-control" [(ngModel)]="enterName"> <br>
+               <input type="date" class="form-control" [(ngModel)]="enterdate"> <br>
+               <input type="password" class ="form-control" [(ngModel)] = "password" placeholder="password"><br>
+                <select class="form-control" [(ngModel)]="selectedValue">
+                  <option value=""> Default</option>
+                   <option value="type-1"> Type-1</option>
+                   <option value="type-2"> Type-2</option>
+                    <option value="type-3"> Type-3</option>
+                </select><br>
+               <button type="button" class="btn btn-primary" (click)="transferData()" value="send">Submit</button> <br>
+             <app-home [parentData]='parentData'[dateObject]= 'dateObject' [accountNumber]='accountNumber' [selectedValue]='selectedValue' [password]='password' (newItemEvent)="addItem($event)"></app-home>
+         </div>
+          </div>
+     </div>
 
-      <h4> Parent Component</h4>
-    </div>
-    <div class="card-body">
-      Pass Data : <input type="text" class="form-control">
-      <input type="button" class="btn btn-primary" (click)="transferData()" value="send">
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+        <ul>
+          <li *ngFor="let item of items">{{item}}</li>
+        </ul>
     </div>
   </div>
-  <app-home></app-home>
 </div>
+
+

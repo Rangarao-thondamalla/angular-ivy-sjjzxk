@@ -1,0 +1,18 @@
+<h4>Child Component</h4>
+{{parentData}}
+{{dateObject}}
+{{selectedValue}}
+{{password}}
+<br>
+Directlly from Parent component {{accountNumber}}
+<br>
+
+
+
+<h1>
+  Out put data changes 
+</h1>
+
+<label for="input-item"> Add an item :</label>
+<input type="text" id="input-item" class="form-control" #newItem>
+<button (click)= "addNewItem(newItem.value)" class="btn- btn-primary"> Add to parent list</button>

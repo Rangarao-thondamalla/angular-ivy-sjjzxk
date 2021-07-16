@@ -7,5 +7,21 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
-  transferData() {}
+    enterName =" Ranga";
+    parentData= " ";
+    enterdate = "";
+    password = "";
+    dateObject = {};
+    selectedValue = "";
+    accountNumber = 1234567;
+    transferData(){
+        this.parentData = this.enterName;
+        this.dateObject = this.enterdate;
+  }
+
+   items = [];
+
+  addItem(newItem: string) {
+    this.items.push(newItem);
+  }
 }
