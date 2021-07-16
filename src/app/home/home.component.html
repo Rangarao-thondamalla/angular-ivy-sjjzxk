@@ -6,13 +6,18 @@
 <br>
 Directlly from Parent component {{accountNumber}}
 <br>
-
-
-
-<h1>
+<h3>
   Out put data changes 
-</h1>
-
+</h3>
 <label for="input-item"> Add an item :</label>
 <input type="text" id="input-item" class="form-control" #newItem>
 <button (click)= "addNewItem(newItem.value)" class="btn- btn-primary"> Add to parent list</button>
+
+<br>
+<br>
+<br>
+<h3> This is from Home component</h3>
+
+<app-employee (valueChange)='displayCounter($event)'></app-employee>
+
+<p> you clicked {{count}}</p>

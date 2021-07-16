@@ -19,4 +19,9 @@ export class HomeComponent  {
   addNewItem(value: string){
     this.newItemEvent.emit(value);
   }
+
+    count = 0;
+     displayCounter(count){
+             return count;
+    }
 }
