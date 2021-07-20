@@ -6,12 +6,4 @@ import { Component, OnInit , Output, EventEmitter} from '@angular/core';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent {
-
-@Output() valueChange = new EventEmitter();
-Counter = 0;
-
-valueChanged(){
-  this.Counter = this.Counter + 1;
-  this.valueChange.emit(this.Counter);
-}
 }

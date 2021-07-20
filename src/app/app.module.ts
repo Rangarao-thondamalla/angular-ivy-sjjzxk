@@ -9,7 +9,7 @@ import { EmployeeComponent } from './home/employee/employee.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, EmployeeComponent ],
+  declarations: [ AppComponent, HelloComponent, HomeComponent, EmployeeComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

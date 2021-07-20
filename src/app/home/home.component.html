@@ -1,23 +1,42 @@
-<h4>Child Component</h4>
-{{parentData}}
-{{dateObject}}
-{{selectedValue}}
-{{password}}
-<br>
-Directlly from Parent component {{accountNumber}}
-<br>
-<h3>
-  Out put data changes 
-</h3>
-<label for="input-item"> Add an item :</label>
-<input type="text" id="input-item" class="form-control" #newItem>
-<button (click)= "addNewItem(newItem.value)" class="btn- btn-primary"> Add to parent list</button>
-
-<br>
-<br>
-<br>
-<h3> This is from Home component</h3>
-
-<app-employee (valueChange)='displayCounter($event)'></app-employee>
-
-<p> you clicked {{count}}</p>
+<div class="row">
+    <div class="col-md-3">
+        <div class="card">
+             <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar5.png" alt="Card image">
+               <div class="card-body">
+                <h4 class="card-title">John Doe</h4>
+             <p class="card-text">Some example text.</p>
+               <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+          </div>
+    </div>
+     <div class="col-md-3">
+        <div class="card">
+             <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar5.png" alt="Card image">
+               <div class="card-body">
+                <h4 class="card-title">John Doe</h4>
+             <p class="card-text">Some example text.</p>
+               <a href="#" class="btn btn-primary">See Profile</a>
+               </div>
+          </div>
+    </div>
+     <div class="col-md-3">
+        <div class="card">
+             <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar5.png" alt="Card image">
+               <div class="card-body">
+                <h4 class="card-title">John Doe</h4>
+             <p class="card-text">Some example text.</p>
+               <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+          </div>
+    </div>
+     <div class="col-md-3">
+        <div class="card">
+             <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar5.png" alt="Card image">
+               <div class="card-body">
+                <h4 class="card-title">John Doe</h4>
+             <p class="card-text">Some example text.</p>
+               <a href="#" class="btn btn-primary">See Profile</a>
+              </div>
+          </div>
+    </div>
+  </div>
