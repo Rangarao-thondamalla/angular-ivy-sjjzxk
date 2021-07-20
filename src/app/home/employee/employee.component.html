@@ -3,49 +3,51 @@
       <div class="col-md-12 bg-success text-white">
             <div class="row">
               <div class="col-md-12">
-                  <h3 class="text-center text-white"> Registration Form</h3>
+                  <h3 class="text-center text-info"> Registration Form</h3>
               </div>
             </div>
-             <form action="" class="registration-form">
+             <form action="" class="registration-form" [formGroup]="regForm" (ngSubmit)="onSubmit()">
                 <div class="form-group">
                   <label for="Name">Full Name :</label>
-                        <input type="text" class="form-control" placeholder="Enter Name" id="name">
+                        <input type="text" class="form-control" placeholder="Enter Name" id="name"  formControlName="name">
                 </div>
                 <div class="form-group">
                   <label for="Email">Email address:</label>
-                      <input type="email" class="form-control" placeholder="Enter email" id="email">
+                      <input type="email" class="form-control" placeholder="Enter email" id="email" formControlName="email">
                 </div>
                 <div class="form-group">
                   <label for="pwd">Password:</label>
-                       <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                       <input type="password" class="form-control" placeholder="Enter password" id="pwd" formControlName= "pwd" >
                 </div>
                 <div class="form-group">
                   <label for="comment">Comment:</label>
-                     <textarea class="form-control" rows="5" id="comment"></textarea>
+                     <textarea class="form-control" rows="5" id="comment" formControlName ="comment"></textarea>
                 </div><br>
                 <div class="form-group">
-                <label for="comment" class="text-warning"> Select Your Gender : </label>
+                <label for="comment" class="text-warning"> <b>Select Your Gender : </b></label>  <span class="p-3"></span>
                     <div class="form-check-inline">
                         <label class="form-check-label">
-                           <input type="radio" class="form-check-input" name="optradio"> Male
+                           <input type="radio" class="form-check-input"  formControlName ="gender" value="male"> Male
                         </label>
                      </div>
-                     <div class="form-check-inline">
+                     <div class="form-check-inline"> 
                           <label class="form-check-label">
-                                 <input type="radio" class="form-check-input" name="optradio"> FeMale
+                                 <input type="radio" class="form-check-input" formControlName ="gender" value="female"> FeMale
                          </label>
                       </div>
                 </div>
                 <div class="form-group">
-                  <input type="file" class="form-control-file">
+                  <input type="file" class="form-control-file" formControlName ="imgfile">
                   <label class="custom-file-label"> Select your Profile Photo ! </label> 
                 </div><br>
                 <div class="form-group form-check">
                   <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox"> Remember me
+                      <input class="form-check-input" type="checkbox" formControlName ="remberme"> Remember me
                   </label>
                 </div>
-               <button type="submit" class="btn btn-danger">Submit</button>
+                 <button type="submit" class="btn btn-danger" [disabled]="!regForm.valid">Submit</button><span class="p-3"></span>
+                <button type="reset" class="btn btn-info" (click)="regForm.reset">Reset</button>
+               
             </form>
       </div>
   </div>
