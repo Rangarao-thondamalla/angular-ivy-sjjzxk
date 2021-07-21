@@ -10,7 +10,7 @@
                 <div class="form-group">
                   <label for="Name">Full Name :</label>
                         <input type="text" class="form-control" placeholder="Enter Name" id="name"  formControlName="name">
-                         <span  class="error" *ngIf="name.invalid && name.touched"> Name is invalid </span>
+                         <div  class="error" *ngIf="name.invalid && name.touched"> Name is invalid </div>
                 </div>
                 <div class="form-group">
                   <label for="Email">Email address:</label>
