@@ -7,9 +7,9 @@ import { HelloComponent } from './hello.component';
 import { HomeComponent } from './home/home.component';
 import { EmployeeComponent } from './home/employee/employee.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { AppRoutingModule } from './app-routing/app-routing.module';
 @NgModule({
-  imports:      [ BrowserModule, FormsModule , ReactiveFormsModule ],
+  imports:      [ BrowserModule, FormsModule , ReactiveFormsModule , AppRoutingModule],
   declarations: [ AppComponent, HelloComponent, HomeComponent, EmployeeComponent],
   bootstrap:    [ AppComponent ]
 })
