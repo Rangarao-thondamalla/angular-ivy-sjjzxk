@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-      <div class="col-md-12 bg-success text-white">
+      <div class="col-md-12 text-black">
             <div class="row">
               <div class="col-md-12">
                   <h3 class="text-center text-info"> Registration Form</h3>
@@ -10,18 +10,22 @@
                 <div class="form-group">
                   <label for="Name">Full Name :</label>
                         <input type="text" class="form-control" placeholder="Enter Name" id="name"  formControlName="name">
+                         <span  class="error" *ngIf="name.invalid && name.touched"> Name is invalid </span>
                 </div>
                 <div class="form-group">
                   <label for="Email">Email address:</label>
                       <input type="email" class="form-control" placeholder="Enter email" id="email" formControlName="email">
+                      <span  class="error" *ngIf="email.invalid && email.touched"> Email is invalid </span>
                 </div>
                 <div class="form-group">
                   <label for="pwd">Password:</label>
                        <input type="password" class="form-control" placeholder="Enter password" id="pwd" formControlName= "pwd" >
+                        <span  class="error" *ngIf="pwd.invalid && pwd.touched"> Password is required </span>
                 </div>
                 <div class="form-group">
                   <label for="comment">Comment:</label>
                      <textarea class="form-control" rows="5" id="comment" formControlName ="comment"></textarea>
+                      <span  class="error" *ngIf="comment.invalid && comment.touched"> Description is required </span>
                 </div><br>
                 <div class="form-group">
                 <label for="comment" class="text-warning"> <b>Select Your Gender : </b></label>  <span class="p-3"></span>
@@ -39,6 +43,7 @@
                 <div class="form-group">
                   <input type="file" class="form-control-file" formControlName ="imgfile">
                   <label class="custom-file-label"> Select your Profile Photo ! </label> 
+                   <span  class="error" *ngIf="imgfile.invalid && imgfile.touched"> Image file is required </span>
                 </div><br>
                 <div class="form-group form-check">
                   <label class="form-check-label">
@@ -47,7 +52,6 @@
                 </div>
                  <button type="submit" class="btn btn-danger" [disabled]="!regForm.valid">Submit</button><span class="p-3"></span>
                 <button type="reset" class="btn btn-info" (click)="regForm.reset">Reset</button>
-               
             </form>
       </div>
   </div>
