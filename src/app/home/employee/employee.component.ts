@@ -1,8 +1,8 @@
 import { Component, OnInit , Output, EventEmitter} from '@angular/core';
 import { FormGroup, FormControl, Validators ,ValidationErrors} from '@angular/forms';
 import { Employee } from './employee';
-
 import { ApiService } from '../../shared/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee',
@@ -11,7 +11,7 @@ import { ApiService } from '../../shared/api.service';
 })
 export class EmployeeComponent {
 
-  constructor(private api : ApiService ){}
+  constructor(private api : ApiService, private router: Router ){}
 
   employeeObj : Employee = new Employee(); 
 
@@ -48,5 +48,6 @@ export class EmployeeComponent {
     }, error=>{
       console.log('something went worong');
     })   
+      this.router.navigateByUrl('/home');
   }
 }
