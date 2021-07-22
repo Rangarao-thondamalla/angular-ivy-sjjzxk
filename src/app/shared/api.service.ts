@@ -32,7 +32,7 @@ export class ApiService {
   }
 
    deleteEmployee(id: number){
-    return this.http.delete<any>('https://5df7ba4a4fdcb20014a483cc.mockapi.io/employees'+id)
+    return this.http.delete<any>('https://5df7ba4a4fdcb20014a483cc.mockapi.io/employees'+ '/' + id)
     .pipe(map((response: any) => {
       return response;
     }))

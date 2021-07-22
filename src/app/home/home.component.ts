@@ -8,18 +8,24 @@ import { Employee } from './employee/employee';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent  {
-
-employeeObj : object;
+export class HomeComponent implements OnInit {
 
   constructor(private api : ApiService ){}
+  employees : any [];
 
+  ngOnInit(){ this.getallEmployees();}
   getallEmployees(){
-      this.api.getEmployee()
+     this.api.getEmployee()
       .subscribe(res=>{
-        this.employeeObj = res;
-        console.log(res);
+        this.employees = res;
       })
   }
 
+  deleteEmployees(row){
+    this.api.deleteEmployee(row.id)
+    .subscribe(res => {
+      console.log('Employee Deleted');
+      this.getallEmployees();
+    })
+  }
 }

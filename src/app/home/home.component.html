@@ -1,7 +1,6 @@
 <div class="container-fluid">
 <div class="row">
       <div class="col-md-12">
-        <button type="button" class="btn btn-primary" (click)=" getallEmployees()">Refresh Data</button>
         <table class="table table-striped mt-3">
     <thead>
       <tr>
@@ -17,17 +16,18 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let row of employeeObj ">
+      <tr *ngFor="let row of employees ">
         <td>{{row.id}}</td>
         <td>{{row.name}}</td>
         <td>{{row.email}}</td>
+        <td>{{row.pwd}}</td>
         <td>{{row.comment}}</td>
         <td>{{row.gender}}</td>
         <td>{{row.imgfile}}</td>
         <td>{{row.remberme}}</td>
         <td>
           <button type="button" class="btn btn-primary">Edit</button><span class="p-3"></span>
-          <button type="button" class="btn btn-danger">Delete</button>
+          <button type="button" class="btn btn-danger" (click)="deleteEmployees(row)">Delete</button>
         </td>
       </tr>
     </tbody>
