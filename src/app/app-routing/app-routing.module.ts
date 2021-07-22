@@ -6,8 +6,8 @@ import { EmployeeComponent } from '../home/employee/employee.component';
 import { HomeComponent } from '../home/home.component';
 
 const routes: Routes = [
-   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-   { path: 'employee-register', component: EmployeeComponent },
+  { path: "", redirectTo:"home", pathMatch: "full" },
+  { path: 'employee-register', component: EmployeeComponent },
   { path: 'home', component: HomeComponent },
 ];
 

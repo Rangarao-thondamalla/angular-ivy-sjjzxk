@@ -1,14 +1,37 @@
 <div class="container-fluid">
 <div class="row">
-    <div class="col-md-3">
-        <div class="card">
-             <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar5.png" alt="Card image">
-               <div class="card-body">
-                <h4 class="card-title">John Doe</h4>
-             <p class="card-text">Some example text.</p>
-               <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
-          </div>
-    </div>
+      <div class="col-md-12">
+        <button type="button" class="btn btn-primary" (click)=" getallEmployees()">Refresh Data</button>
+        <table class="table table-striped mt-3">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+        <th scope="col">Description</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Profile Photo</th>
+        <th scope="col">Check box</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of employeeObj ">
+        <td>{{row.id}}</td>
+        <td>{{row.name}}</td>
+        <td>{{row.email}}</td>
+        <td>{{row.comment}}</td>
+        <td>{{row.gender}}</td>
+        <td>{{row.imgfile}}</td>
+        <td>{{row.remberme}}</td>
+        <td>
+          <button type="button" class="btn btn-primary">Edit</button><span class="p-3"></span>
+          <button type="button" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+      </div>
     </div>
   </div>
