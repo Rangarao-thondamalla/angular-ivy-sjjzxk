@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 
-import { EmployeeComponent } from '../home/employee/employee.component';
-import { HomeComponent } from '../home/home.component';
+import { EmployeeComponent } from './home/employee/employee.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: "", redirectTo:"home", pathMatch: "full" },

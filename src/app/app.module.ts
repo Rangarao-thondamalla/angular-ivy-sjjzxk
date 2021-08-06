@@ -10,7 +10,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { EmployeeComponent } from './home/employee/employee.component';
-import { AppRoutingModule } from './app-routing/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { ApiService } from './shared/api.service';
 
 
